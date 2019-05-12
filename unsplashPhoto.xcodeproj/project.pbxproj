@@ -13,6 +13,8 @@
 		3278CAC52288221500B56431 /* ZZCWaterfallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAC42288221500B56431 /* ZZCWaterfallFlowLayout.m */; };
 		3278CAC82288222600B56431 /* ZZCPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */; };
 		3278CACB2288223B00B56431 /* ZZCPhotoPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */; };
+		3278CAD32288391200B56431 /* ZZCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAD22288391200B56431 /* ZZCAlertController.m */; };
+		3278CAD9228842FC00B56431 /* ZZCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAD8228842FC00B56431 /* ZZCShareView.m */; };
 		32CCF0432287333B00F2DA54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0422287333B00F2DA54 /* AppDelegate.m */; };
 		32CCF0462287333B00F2DA54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0452287333B00F2DA54 /* ViewController.m */; };
 		32CCF0492287333B00F2DA54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF0472287333B00F2DA54 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 		3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		3278CAC92288223B00B56431 /* ZZCPhotoPreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCPhotoPreView.h; sourceTree = "<group>"; };
 		3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCPhotoPreView.m; sourceTree = "<group>"; };
+		3278CAD12288391200B56431 /* ZZCAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCAlertController.h; sourceTree = "<group>"; };
+		3278CAD22288391200B56431 /* ZZCAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCAlertController.m; sourceTree = "<group>"; };
+		3278CAD7228842FC00B56431 /* ZZCShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCShareView.h; sourceTree = "<group>"; };
+		3278CAD8228842FC00B56431 /* ZZCShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCShareView.m; sourceTree = "<group>"; };
 		32CCF03E2287333B00F2DA54 /* unsplashPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unsplashPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CCF0412287333B00F2DA54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32CCF0422287333B00F2DA54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 			children = (
 				3278CAAB228820C000B56431 /* UIColor+Hex.h */,
 				3278CAAC228820C000B56431 /* UIColor+Hex.m */,
+				3278CAD12288391200B56431 /* ZZCAlertController.h */,
+				3278CAD22288391200B56431 /* ZZCAlertController.m */,
 			);
 			path = UItil;
 			sourceTree = "<group>";
@@ -120,6 +128,8 @@
 				3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */,
 				3278CAC92288223B00B56431 /* ZZCPhotoPreView.h */,
 				3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */,
+				3278CAD7228842FC00B56431 /* ZZCShareView.h */,
+				3278CAD8228842FC00B56431 /* ZZCShareView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,7 +309,9 @@
 			files = (
 				32CCF0462287333B00F2DA54 /* ViewController.m in Sources */,
 				3278CAAD228820C000B56431 /* UIColor+Hex.m in Sources */,
+				3278CAD32288391200B56431 /* ZZCAlertController.m in Sources */,
 				3278CAC52288221500B56431 /* ZZCWaterfallFlowLayout.m in Sources */,
+				3278CAD9228842FC00B56431 /* ZZCShareView.m in Sources */,
 				32CCF0432287333B00F2DA54 /* AppDelegate.m in Sources */,
 				32CCF0542287333C00F2DA54 /* main.m in Sources */,
 				3278CABF228821B800B56431 /* ZZCPhotoModel.m in Sources */,

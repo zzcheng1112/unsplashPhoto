@@ -15,6 +15,7 @@
 #import "ConstantUI.h"
 #import <SDAutoLayout/SDAutoLayout.h>
 #import <MJExtension/MJExtension.h>
+#import "MBProgressHUD.h"
 
 static NSString *kCellIdentifier = @"photoCellId";
 static const NSInteger kFirstScreenPhotoStepCount = 30; //每次刷新photo的张数
@@ -25,18 +26,20 @@ static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
 
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @property (nonatomic ,assign) BOOL isLoadingData;
+@property (nonatomic ,assign) NSUInteger currentPage; //当前页数
+@property (nonatomic ,strong) MBProgressHUD *hud;
 
 @end
 
 @implementation ViewController {
-    NSUInteger _currentPage; //当前页数
+    BOOL _isFirstLoad;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+    self.title = @"ZZC的相册";
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = [NSMutableArray array];
     
@@ -50,14 +53,24 @@ static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
     [self.collectionView registerClass:[ZZCPhotoCollectionViewCell class] forCellWithReuseIdentifier:kCellIdentifier];
     [self.view addSubview:self.collectionView];
     _currentPage = 1;
+    _isFirstLoad = YES;
     [self getDataFromService];
+    _isFirstLoad = NO;
 }
 
+- (void)showToast:(NSString *)text {
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _hud.mode = MBProgressHUDModeIndeterminate;
+    _hud.labelText = text;
+    _hud.removeFromSuperViewOnHide = YES;
+}
 - (void)getDataFromService {
     if (_isLoadingData)
         return;
     _isLoadingData = YES;
-    
+    if (_isFirstLoad) {
+        [self showToast:@"加载中,请稍后"];
+    }
     NSUInteger prePage = self.dataArray.count ? kPhotoStepCount : kFirstScreenPhotoStepCount;
     
     __weak typeof(self)weakSelf = self;
@@ -69,10 +82,18 @@ static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
             [strongSelf.dataArray addObject:model];
         }
         strongSelf.isLoadingData = NO;
+        strongSelf.currentPage ++;
+        if (strongSelf.hud) {
+            [strongSelf.hud hide:YES];
+        }
         [strongSelf.collectionView reloadData];
+    
     } failure:^(NSError * _Nonnull error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.isLoadingData = NO;
+        if (strongSelf.hud) {
+            [strongSelf.hud hide:YES];
+        }
     }];
 }
 
