@@ -7,17 +7,115 @@
 //
 
 #import "ViewController.h"
+#import "ZZCPhotoCollectionViewCell.h"
+#import "ZZCWaterfallFlowLayout.h"
+#import "ZZCPhotoModel.h"
+#import "ZZCPhotoPreView.h"
+#import "ZZCDownloadManager.h"
+#import "ConstantUI.h"
+#import <SDAutoLayout/SDAutoLayout.h>
+#import <MJExtension/MJExtension.h>
 
-@interface ViewController ()
+static NSString *kCellIdentifier = @"photoCellId";
+static const NSInteger kFirstScreenPhotoStepCount = 30; //每次刷新photo的张数
+static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
+@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic ,strong) UICollectionView *collectionView;
+
+@property (nonatomic ,strong) NSMutableArray *dataArray;
+@property (nonatomic ,assign) BOOL isLoadingData;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSUInteger _currentPage; //当前页数
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.dataArray = [NSMutableArray array];
+    
+    ZZCWaterfallFlowLayout *layout = [[ZZCWaterfallFlowLayout alloc] init];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, LL_StatusBarAndNavigationBarHeight, self.view.width, self.view.height - LL_StatusBarAndNavigationBarHeight) collectionViewLayout:layout];
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
+    [self.collectionView registerClass:[ZZCPhotoCollectionViewCell class] forCellWithReuseIdentifier:kCellIdentifier];
+    [self.view addSubview:self.collectionView];
+    _currentPage = 1;
+    [self getDataFromService];
+}
+
+- (void)getDataFromService {
+    if (_isLoadingData)
+        return;
+    _isLoadingData = YES;
+    
+    NSUInteger prePage = self.dataArray.count ? kPhotoStepCount : kFirstScreenPhotoStepCount;
+    
+    __weak typeof(self)weakSelf = self;
+    [[ZZCDownloadManager sharedManager] getPhotosWithPage:_currentPage prePage:prePage success:^(id  _Nullable responseObject) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        NSArray *result = (NSArray*)responseObject;
+        for (NSDictionary *dict in result) {
+            ZZCPhotoModel *model = [ZZCPhotoModel mj_objectWithKeyValues:dict];
+            [strongSelf.dataArray addObject:model];
+        }
+        strongSelf.isLoadingData = NO;
+        [strongSelf.collectionView reloadData];
+    } failure:^(NSError * _Nonnull error) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        strongSelf.isLoadingData = NO;
+    }];
+}
+
+#pragma mark - datasource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ZZCPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
+    cell.model = self.dataArray[indexPath.item];
+    [self checkLoadForIndexPath:indexPath];
+    return cell;
 }
 
 
+#pragma mark - delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    ZZCPhotoCollectionViewCell *cell = (ZZCPhotoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    ZZCPhotoModel *photoModle = self.dataArray[indexPath.item];
+    if (photoModle) {
+        ZZCPhotoPreView *preView = [[ZZCPhotoPreView alloc] init];
+        preView.image = [cell getImage];
+        CGRect frame = [collectionView convertRect:cell.frame toView:self.view];
+        preView.preBeginFrame = frame;
+        preView.photoModel = photoModle;
+        [preView showWithAnimate:YES];
+    }
+}
+#pragma mark - 设置item的size
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = (self.collectionView.bounds.size.width - kColSpacing * (columnCount + 1)) / columnCount;
+    ZZCPhotoModel *model = self.dataArray[indexPath.item];
+    CGFloat height = model.height.floatValue / model.width.floatValue * width;
+    CGSize newSize = CGSizeMake(width, height);
+    return newSize;
+}
+
+- (void)checkLoadForIndexPath:(NSIndexPath *)indexPath{
+    if (kPhotoStepCount + indexPath.item >= self.dataArray.count) {
+        [self getDataFromService];
+    }
+    
+}
 @end

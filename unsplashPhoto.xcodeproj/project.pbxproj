@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3278CAAD228820C000B56431 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAAC228820C000B56431 /* UIColor+Hex.m */; };
+		3278CABF228821B800B56431 /* ZZCPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CABE228821B800B56431 /* ZZCPhotoModel.m */; };
+		3278CAC2228821CB00B56431 /* ZZCDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAC1228821CB00B56431 /* ZZCDownloadManager.m */; };
+		3278CAC52288221500B56431 /* ZZCWaterfallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAC42288221500B56431 /* ZZCWaterfallFlowLayout.m */; };
+		3278CAC82288222600B56431 /* ZZCPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */; };
+		3278CACB2288223B00B56431 /* ZZCPhotoPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */; };
 		32CCF0432287333B00F2DA54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0422287333B00F2DA54 /* AppDelegate.m */; };
 		32CCF0462287333B00F2DA54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0452287333B00F2DA54 /* ViewController.m */; };
 		32CCF0492287333B00F2DA54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF0472287333B00F2DA54 /* Main.storyboard */; };
@@ -14,9 +20,25 @@
 		32CCF04E2287333C00F2DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF04D2287333C00F2DA54 /* Assets.xcassets */; };
 		32CCF0512287333C00F2DA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF04F2287333C00F2DA54 /* LaunchScreen.storyboard */; };
 		32CCF0542287333C00F2DA54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0532287333C00F2DA54 /* main.m */; };
+		C3DC7A07CA5F32598CDAAB9A /* libPods-unsplashPhoto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3C2B5EB1B1188868B8674 /* libPods-unsplashPhoto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0891F5BBE45077E7549E5A6F /* Pods-unsplashPhoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unsplashPhoto.release.xcconfig"; path = "Target Support Files/Pods-unsplashPhoto/Pods-unsplashPhoto.release.xcconfig"; sourceTree = "<group>"; };
+		0AD3C2B5EB1B1188868B8674 /* libPods-unsplashPhoto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unsplashPhoto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3278CAA42288200E00B56431 /* ConstantUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantUI.h; sourceTree = "<group>"; };
+		3278CAAB228820C000B56431 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3278CAAC228820C000B56431 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		3278CABD228821B800B56431 /* ZZCPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCPhotoModel.h; sourceTree = "<group>"; };
+		3278CABE228821B800B56431 /* ZZCPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCPhotoModel.m; sourceTree = "<group>"; };
+		3278CAC0228821CB00B56431 /* ZZCDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCDownloadManager.h; sourceTree = "<group>"; };
+		3278CAC1228821CB00B56431 /* ZZCDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCDownloadManager.m; sourceTree = "<group>"; };
+		3278CAC32288221500B56431 /* ZZCWaterfallFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCWaterfallFlowLayout.h; sourceTree = "<group>"; };
+		3278CAC42288221500B56431 /* ZZCWaterfallFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCWaterfallFlowLayout.m; sourceTree = "<group>"; };
+		3278CAC62288222600B56431 /* ZZCPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		3278CAC92288223B00B56431 /* ZZCPhotoPreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCPhotoPreView.h; sourceTree = "<group>"; };
+		3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCPhotoPreView.m; sourceTree = "<group>"; };
 		32CCF03E2287333B00F2DA54 /* unsplashPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unsplashPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CCF0412287333B00F2DA54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32CCF0422287333B00F2DA54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,6 +50,7 @@
 		32CCF0502287333C00F2DA54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32CCF0522287333C00F2DA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32CCF0532287333C00F2DA54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53D45B5206E8F3D1619811D9 /* Pods-unsplashPhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unsplashPhoto.debug.xcconfig"; path = "Target Support Files/Pods-unsplashPhoto/Pods-unsplashPhoto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +58,79 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DC7A07CA5F32598CDAAB9A /* libPods-unsplashPhoto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3278CAA222881F8200B56431 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3278CAA42288200E00B56431 /* ConstantUI.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3278CAA52288206100B56431 /* PhotoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3278CAA82288207E00B56431 /* Models */,
+				3278CAAA2288208B00B56431 /* Views */,
+				3278CAA92288208500B56431 /* Controllers */,
+				3278CAA62288206B00B56431 /* UItil */,
+			);
+			path = PhotoDemo;
+			sourceTree = "<group>";
+		};
+		3278CAA62288206B00B56431 /* UItil */ = {
+			isa = PBXGroup;
+			children = (
+				3278CAAB228820C000B56431 /* UIColor+Hex.h */,
+				3278CAAC228820C000B56431 /* UIColor+Hex.m */,
+			);
+			path = UItil;
+			sourceTree = "<group>";
+		};
+		3278CAA82288207E00B56431 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3278CABD228821B800B56431 /* ZZCPhotoModel.h */,
+				3278CABE228821B800B56431 /* ZZCPhotoModel.m */,
+				3278CAC0228821CB00B56431 /* ZZCDownloadManager.h */,
+				3278CAC1228821CB00B56431 /* ZZCDownloadManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3278CAA92288208500B56431 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3278CAAA2288208B00B56431 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3278CAC32288221500B56431 /* ZZCWaterfallFlowLayout.h */,
+				3278CAC42288221500B56431 /* ZZCWaterfallFlowLayout.m */,
+				3278CAC62288222600B56431 /* ZZCPhotoCollectionViewCell.h */,
+				3278CAC72288222600B56431 /* ZZCPhotoCollectionViewCell.m */,
+				3278CAC92288223B00B56431 /* ZZCPhotoPreView.h */,
+				3278CACA2288223B00B56431 /* ZZCPhotoPreView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		32CCF0352287333B00F2DA54 = {
 			isa = PBXGroup;
 			children = (
 				32CCF0402287333B00F2DA54 /* unsplashPhoto */,
 				32CCF03F2287333B00F2DA54 /* Products */,
+				EAC86B7DB46132C711AA82DF /* Pods */,
+				94D3F4D7733B1EFCCBDE3E0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +145,8 @@
 		32CCF0402287333B00F2DA54 /* unsplashPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				3278CAA52288206100B56431 /* PhotoDemo */,
+				3278CAA222881F8200B56431 /* SupportingFiles */,
 				32CCF0412287333B00F2DA54 /* AppDelegate.h */,
 				32CCF0422287333B00F2DA54 /* AppDelegate.m */,
 				32CCF0442287333B00F2DA54 /* ViewController.h */,
@@ -74,6 +161,23 @@
 			path = unsplashPhoto;
 			sourceTree = "<group>";
 		};
+		94D3F4D7733B1EFCCBDE3E0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AD3C2B5EB1B1188868B8674 /* libPods-unsplashPhoto.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAC86B7DB46132C711AA82DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53D45B5206E8F3D1619811D9 /* Pods-unsplashPhoto.debug.xcconfig */,
+				0891F5BBE45077E7549E5A6F /* Pods-unsplashPhoto.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32CCF0572287333C00F2DA54 /* Build configuration list for PBXNativeTarget "unsplashPhoto" */;
 			buildPhases = (
+				9A711A1163B1DF4D158180B7 /* [CP] Check Pods Manifest.lock */,
 				32CCF03A2287333B00F2DA54 /* Sources */,
 				32CCF03B2287333B00F2DA54 /* Frameworks */,
 				32CCF03C2287333B00F2DA54 /* Resources */,
+				D180CECFFFE483DB00C3335E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,15 +245,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A711A1163B1DF4D158180B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-unsplashPhoto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D180CECFFFE483DB00C3335E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-unsplashPhoto/Pods-unsplashPhoto-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-unsplashPhoto/Pods-unsplashPhoto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32CCF03A2287333B00F2DA54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				32CCF0462287333B00F2DA54 /* ViewController.m in Sources */,
+				3278CAAD228820C000B56431 /* UIColor+Hex.m in Sources */,
+				3278CAC52288221500B56431 /* ZZCWaterfallFlowLayout.m in Sources */,
 				32CCF0432287333B00F2DA54 /* AppDelegate.m in Sources */,
 				32CCF0542287333C00F2DA54 /* main.m in Sources */,
+				3278CABF228821B800B56431 /* ZZCPhotoModel.m in Sources */,
 				32CCF04C2287333B00F2DA54 /* unsplashPhoto.xcdatamodeld in Sources */,
+				3278CACB2288223B00B56431 /* ZZCPhotoPreView.m in Sources */,
+				3278CAC2228821CB00B56431 /* ZZCDownloadManager.m in Sources */,
+				3278CAC82288222600B56431 /* ZZCPhotoCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +446,13 @@
 		};
 		32CCF0582287333C00F2DA54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D45B5206E8F3D1619811D9 /* Pods-unsplashPhoto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9386XJ2F;
 				INFOPLIST_FILE = unsplashPhoto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,10 +465,13 @@
 		};
 		32CCF0592287333C00F2DA54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0891F5BBE45077E7549E5A6F /* Pods-unsplashPhoto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J9386XJ2F;
 				INFOPLIST_FILE = unsplashPhoto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
