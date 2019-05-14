@@ -18,8 +18,7 @@
 #import "MBProgressHUD.h"
 
 static NSString *kCellIdentifier = @"photoCellId";
-static const NSInteger kFirstScreenPhotoStepCount = 30; //每次刷新photo的张数
-static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
+static const NSInteger kPhotoStepCount = 20; //每次刷新photo的张数
 @interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic ,strong) UICollectionView *collectionView;
@@ -71,10 +70,8 @@ static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
     if (_isFirstLoad) {
         [self showToast:@"加载中,请稍后"];
     }
-    NSUInteger prePage = self.dataArray.count ? kPhotoStepCount : kFirstScreenPhotoStepCount;
-    
     __weak typeof(self)weakSelf = self;
-    [[ZZCDownloadManager sharedManager] getPhotosWithPage:_currentPage prePage:prePage success:^(id  _Nullable responseObject) {
+    [[ZZCDownloadManager sharedManager] getPhotosWithPage:_currentPage prePage:kPhotoStepCount success:^(id  _Nullable responseObject) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
         NSArray *result = (NSArray*)responseObject;
         for (NSDictionary *dict in result) {
@@ -134,7 +131,7 @@ static const NSInteger kPhotoStepCount = 15; //每次刷新photo的张数
 }
 
 - (void)checkLoadForIndexPath:(NSIndexPath *)indexPath{
-    if (kPhotoStepCount + indexPath.item >= self.dataArray.count) {
+    if (kPhotoStepCount * 0.5 + indexPath.item >= self.dataArray.count) {
         [self getDataFromService];
     }
     
