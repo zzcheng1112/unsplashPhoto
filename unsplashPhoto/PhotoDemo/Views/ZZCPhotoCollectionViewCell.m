@@ -27,6 +27,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = RandColor;
+        self.layer.cornerRadius = 10;
+        self.layer.masksToBounds = YES;
         [self setUpUI];
     }
     return self;
