@@ -22,6 +22,7 @@
 		32CCF04E2287333C00F2DA54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF04D2287333C00F2DA54 /* Assets.xcassets */; };
 		32CCF0512287333C00F2DA54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CCF04F2287333C00F2DA54 /* LaunchScreen.storyboard */; };
 		32CCF0542287333C00F2DA54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF0532287333C00F2DA54 /* main.m */; };
+		BE6F9D3A228E9C5F00128177 /* UICollectionView+EmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F9D38228E9C5F00128177 /* UICollectionView+EmptyDataView.m */; };
 		C3DC7A07CA5F32598CDAAB9A /* libPods-unsplashPhoto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3C2B5EB1B1188868B8674 /* libPods-unsplashPhoto.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		32CCF0522287333C00F2DA54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32CCF0532287333C00F2DA54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53D45B5206E8F3D1619811D9 /* Pods-unsplashPhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unsplashPhoto.debug.xcconfig"; path = "Target Support Files/Pods-unsplashPhoto/Pods-unsplashPhoto.debug.xcconfig"; sourceTree = "<group>"; };
+		BE6F9D38228E9C5F00128177 /* UICollectionView+EmptyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+EmptyDataView.m"; sourceTree = "<group>"; };
+		BE6F9D39228E9C5F00128177 /* UICollectionView+EmptyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+EmptyDataView.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		3278CAA62288206B00B56431 /* UItil */ = {
 			isa = PBXGroup;
 			children = (
+				BE6F9D39228E9C5F00128177 /* UICollectionView+EmptyDataView.h */,
+				BE6F9D38228E9C5F00128177 /* UICollectionView+EmptyDataView.m */,
 				3278CAAB228820C000B56431 /* UIColor+Hex.h */,
 				3278CAAC228820C000B56431 /* UIColor+Hex.m */,
 				3278CAD12288391200B56431 /* ZZCAlertController.h */,
@@ -312,6 +317,7 @@
 				3278CAD32288391200B56431 /* ZZCAlertController.m in Sources */,
 				3278CAC52288221500B56431 /* ZZCWaterfallFlowLayout.m in Sources */,
 				3278CAD9228842FC00B56431 /* ZZCShareView.m in Sources */,
+				BE6F9D3A228E9C5F00128177 /* UICollectionView+EmptyDataView.m in Sources */,
 				32CCF0432287333B00F2DA54 /* AppDelegate.m in Sources */,
 				32CCF0542287333C00F2DA54 /* main.m in Sources */,
 				3278CABF228821B800B56431 /* ZZCPhotoModel.m in Sources */,
